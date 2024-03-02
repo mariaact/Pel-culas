@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Conpatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="/public/stylesheets/carrusel.css">
+    <link rel="stylesheet" href="/public/stylesheets/login.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="menu container"> <!--menu principal-->
+            <a href="#" class="logo"> MejoresSeries</a>
+            <input type="checkbox" id="menu" />
+            <label class="label" for="menu">
+                <img src="/public/img/menu.png" class="menu-icono" alt="menu">
+            </label>
+
+            <a href="#" class="btn-1">Login</a>
+        </div>
+
+        <div id="div-sobresaliente" style="display: none;">
+            <h2>Inicio de Sesión </h2>
+            <form>
+                <label class="logIn" for="username"> Usuario: </label>
+                <input type="text" id="username" placeholder="Escribe tu nombre..." required>
+
+                
+                <label class="logIn" for="password"> Contraseña: </label>
+
+                <div class="contrasenaLogin">
+
+                    <input type="password" for="password" id="password" placeholder="Escribe tu contraseña..." required></input>
+
+                    <button class="toggleContrasenaLogin" onclick="toggleMostrarContrasenaLogin()">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+
+                </div>
+
+                <div class="contenedorCuenta">
+                    <a id="enlaceCuenta" class="preguntaCuenta" href="#">¿No tienes una cuenta?</a>
+                    <a id="preguntaContrasena" class="preguntaContrasena" href="#">¿Te has olvidado de tu contraseña?</a>
+                </div>
+
+                <input class="botonLogIn" type="submit" value="LogIn">
+            </form>
+        </div>
+
+        <div id="registro" style="display: none;">
+            <h2> Registro </h2>
+            <form>
+                <label class="camposRegistro" for="usernameRegistro"> Nombre de usuario: </label>
+                <input type="text" id="usernameRegistro" placeholder="Escribe tu nombre de usuario..." required>
+
+                <label class="camposRegistro" for="emailRegistro"> Email: </label>
+                <input type="text" id="emailRegistro" placeholder="Escribe tu email..." required>
+
+                <label class="camposRegistro" for="password"> Contraseña: </label>
+
+                <div class="contrasena">
+
+                    <input type="password" for="passwordRegisto" id="passwordRegistro" placeholder="Escribe tu contraseña..." required></input>
+
+                    <button class="toggleContrasena" onclick="toggleMostrarContrasena()">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+
+                </div>
+                
+                <div class="contenedorRegistro">
+                    <a id="enlaceCuentaExistente" class="enlaceRegistro" href="#">¿Ya tienes cuenta? Inicia Sesión</a>
+                </div>
+
+                <input class="botonLogIn" type="submit" value="Registrar">
+            </form>
+        </div>
+        
+        <div id="cambiarContrasena" style="display: none;">
+            <h2> Cambio de contraseña </h2>
+            <form>
+                <label class="contrasenaOlvidada" for="emailContrasena"> Email: </label>
+                <input type="text" id="emailContrasena" placeholder="Escribe tu correo electrónico..." required>
+
+                <label class="contrasenaOlvidada" for="password"> Contraseña: </label>
+
+                <div class="contrasenaNueva">
+                    <input type="password" for="contrasenaOlvidada" id="nuevaContrasena" placeholder="Escribe tu contraseña..." required></input>
+                    <button class="toggleContrasenaOlvidada" onclick="toggleMostrarContrasenaOlvidad()">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+                </div>
+                
+                <label class="contrasenaOlvidada" for="password"> Repita la contraseña: </label>
+
+                <div class="contrasenaNueva1">
+                    <input type="password" for="contrasenaOlvidada1" id="nuevaContrasena1" placeholder="Escribe tu contraseña de nuevo..." required></input>
+                    <button class="toggleContrasenaOlvidada1" onclick="toggleMostrarContrasenaOlvidad1()">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+                </div>
+                <div class="contenedorRegistro">
+                    <a id="enlaceCuentaExistente2" class="enlaceRegistro" href="#">¿Ya tienes cuenta? Inicia Sesión</a>
+                </div>
+                <input class="botonContrasenaOlvidada" type="submit" value="Cambiar Contraseña">
+            </form>
+        </div>
+    </header>
+
+    <div class="carrusel">
+        <div class="imagen-carrusel">
+            <img src="https://image.tmdb.org/t/p/original/uUiIGztTrfDhPdAFJpr6m4UBMAd.jpg" alt="">
+            <img src="https://image.tmdb.org/t/p/original/ehumsuIBbgAe1hg343oszCLrAfI.jpg" alt="">
+            <img src="https://image.tmdb.org/t/p/original/yl2GfeCaPoxChcGyM5p7vYp1CKS.jpg" alt="">
+            <img src="https://image.tmdb.org/t/p/original/pA4sNvcohTNPx3AhEEeIu8gSt7h.jpg" alt="">
+        </div>
+    </div>
+
+
+    <script src="/public/javascripts/login.js"></script>
+    <script src="/public/javascripts/carrusel.js"></script>
+
+</body>
+
+</html>
